@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace todo
 {
     public class Task
     {
-        public string? Description
+        required public string Description
         {
             get;
             set;
         }
-        public string? Priority
+        required public string Priority
         {
             get;
             set;
@@ -116,7 +116,7 @@ namespace todo
                         Console.Write("Enter a task: ");
                         string description = Console.ReadLine()!;
 
-                        string priority = "No Priority";
+                        string priority = "";
                         while (true)
                         {
                             Console.Write("Enter priority (High, Medium, Low) or press Enter to skip: ");
